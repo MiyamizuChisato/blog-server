@@ -1,0 +1,56 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+spring:
+  application:
+    name: blog-serve
+  redis:
+    host: 43.143.119.158
+    port: 6379
+  rabbitmq:
+    host: 43.143.119.158
+    port: 5672
+    username: miya
+    password: ao1sakura
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+  jpa:
+    show-sql: false
+    database: mysql
+    generate-ddl: false
+  datasource:
+    username: miya
+    password: ao1sakura
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.143.119.158:3306/db_blog?serverTimezone=GMT%2B8
+  mail:
+    host: smtp.163.com
+    default-encoding: UTF-8
+    protocol: smtp
+    username: miyamizuchisato@163.com
+    password: KXKBXFYQJZDSDVBM
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+          port: ${spring.mail.port}
+          auth: true
+          starttls:
+            enable: true
+            required: true
+blog:
+  secret: ao1sakura
+  endpoint: oss-cn-hangzhou.aliyuncs.com
+  access-key-id: LTAI5tRfMdXq4ADPnxHbbqMT
+  access-key-secret: egh4xBTXfCnfJGfUphdnnpR0OrN4Y2
+  bucket-name: miya-blog

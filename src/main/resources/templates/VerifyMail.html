@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            color: #1460da;
+            font-size: 3rem;
+        }
+
+        .label {
+            font-size: 2.5rem;
+            color: #5f5f5fcc;
+        }
+
+        .tips {
+            font-size: 1.5rem;
+            color: #8f8f8fcc;
+        }
+
+        .code {
+            margin: 20px;
+            border-radius: 4px;
+            padding: 12px 20px;
+            background-color: #6777ef;
+            color: #fefefe;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="code" th:text="${code}"></div>
+</div>
+</body>
+
+</html>
